@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>任务六：通过HTML及CSS模拟报纸排版</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+<style type="text/css">
+body{
+margin:0;padding:0;font-family:"黑体";background:#ccc;
+}
+p {
+   margin-top:0;
+   margin-bottom:0;
+}
+.main{
+width: 980px;height: 1386px;margin: 0 auto;background: #fff;position:relative;
+}
+.top{
+width:892px;height:62px;margin:0 auto;font-size:12px;border-bottom: 2px solid #938e8c;
+}
+.top_left{
+background:red;width:110px;height:61px;display:inline-block;
+}
+.top_left span{
+margin-top:47px;margin-left:4px;display:block;color:#fff;/*<span>是行内元素，span只有margin-left和margin-right才有效果。要想margin-top生效就要把span转给块级元素,或者float浮动*/
+}
+.top_time{
+color: #d45d5c;margin-top: 45px;float:right;
+}
+.middle_top{
+margin: 44px;
+}
+.middle_topleft{
+position:relative;float:left;
+}
+.middle_topleft img{
+width:641px;height:301px;
+}
+.middle_topleft .greenleft{
+width:191px;height:301px;background:green;opacity:0.5;position:absolute;top:0px;left:0px;
+}
+
+.middle_topleft .pinkright{
+width:191px;height:301px;background:pink;opacity:0.5;position:absolute;top:0px;right:0px;
+}
+.middle_topright{
+position:relative;float:right;width:203px;height:300px;border-top:2px solid #cc8091;
+}
+.about1{
+font-size: 24px;color: #000;font-family: "微软雅黑";line-height: 40px;text-decoration: underline;font-variant: small-caps;/*把段落设置为小型大写字母字体：*/
+text-transform: capitalize;/*text-transform 属性控制文本的大小写。capitalize: 首字母大写*/
+}
+.about1:nth-child(2){
+margin-top:-10px;
+}
+.about3{
+font-size: 12px;color: #676767;font-family: "楷体";line-height: 10px;font-style: oblique;/*倾斜的字体样式。*/
+}
+.about4{
+font-size: 116px;color:#75b86b;font-family: "微软雅黑";font-style: oblique;margin-left:-18px;
+}
+.about5{
+font-size: 55px;color: #cc8091;font-family: "微软雅黑";position:absolute;bottom:-10px;
+}
+.about6{
+font-size: 21px;color: #cc8091;font-family: "微软雅黑";position:absolute;bottom:11px;left:70px;
+}
+.about7{
+font-size: 12px;color: #ccc;font-family: "微软雅黑";position: absolute;bottom: 0px;left: 70px;
+}
+
+.middle_bottom{
+margin:44px;width:888px;float:left;
+}
+.middle_bottomleft{
+width: 240px;float: left;margin-right: 20px;
+}
+.middle_bottommiddle{
+width: 200px;float: left;margin-right: 20px;
+}
+.middle_bottomright{
+width: 150px;float: left;margin-right: 20px;
+}
+.middle_bottomleft p{
+font-size:12px;color:#767777;line-height:16px;font-family:"宋体";
+}
+.middle_bottommiddle p{
+font-size: 12px;color: #231815;line-height: 16px;font-family: "微软雅黑";opacity: 0.7;
+}
+.middle_bottomright p{
+font-size: 12px;color:#231815;line-height:16px;font-family:"微软雅黑";margin-bottom:50px;
+}
+.what{
+height:28px;font-size:16px;color:#418c59;font-family:"微软雅黑";font-weight:bold;text-decoration:underline;cursor:pointer;
+}
+.when{
+height:28px;font-size:16px;color:#d2994f;font-family:"微软雅黑";font-weight:bold;text-decoration:underline;cursor:pointer;
+}
+.how{
+height:28px;font-size:16px;color:#cc7680;font-family:"微软雅黑";font-weight:bold;text-decoration:underline;cursor:pointer;
+}
+ul{
+list-style:none;color:#231815;font-size:12px;font-family:"微软雅黑";line-height:16px;opacity:0.7;
+}
+li{
+margin-bottom: 5px;margin-left:-40px;
+}
+ul span{
+color:#cd4a48;font-style: oblique;
+}
+.buttom{
+width:892px;margin:0 44px;float:left;
+}
+.buttom_left{
+float:left;width:415px;
+}
+.buttom_lefttop{
+border-bottom:2px solid #11456b;
+}
+.buttom_lefttop span{
+color:#f5e327;font-size: 72px;font-family:"黑体";font-style: oblique;font-weight: bold;
+}
+.buttom_lefttop p{
+font-size: 42px;line-height: 43px;font-family: "黑体";color: #11456b;font-weight:bold;
+}
+.buttom_lefttop p:nth-child(2){
+font-size:33px;
+}
+.buttom_leftbottom{
+color:#767777;font-size:12px;font-family: "宋体";padding:10px 0;margin-top:10px;
+}
+.buttom_leftbottom p{
+line-height: 16px;text-indent: 2em;
+}
+.qian p{
+text-indent: 0em;
+}
+.qian p:first-letter{
+font-size:70px;color: #f5e327;font-family: "微软雅黑";line-height: 60px;float:left;margin:5px;
+}
+.pic_2{
+float:right;margin:10px 0 10px 10px;
+}
+.bottom_right{
+float:right;width:458px;
+}
+.bottom_righttop{
+height:275px;position:relative;
+}
+.buttom .text{
+background:#000;opacity: 0.3;width:458px;height:61px;position: absolute;bottom:18px;
+}
+.buttom .text p{
+font-size:26px;color:#fff;font-family: "微软雅黑";margin-left: 50px;height: 44px;line-height: 44px;
+border-left: 3px solid #72b16a;margin-top: 10px;text-indent: 1em;letter-spacing:140%;/*字间距*/
+}
+.buttom .text span{
+font-size:12px;color:#72b16a;font-family: "微软雅黑";font-style:oblique;margin-left: 5px;
+}
+.bottom_rightbottom{
+width:459px;height:318px;background:#eeeed6;margin-top:15px;position:relative;
+}
+.text1 ul{
+list-style-image: url("image/sanjiao.png");
+}
+.text1 li{
+font-size: 16px;color: #5a5b5b;font-family: "宋体";text-align: left;margin-left: 25px;padding-top: 20px;line-height: 20px;
+}
+.text1 .sss{
+font-size: 12px;color: #5a5b5b;font-family: "宋体";text-align: right;line-height: 20px;font-style: oblique;
+}
+.text2{
+width: 260px;height: 160px;background: #d55d5c;position: absolute;bottom: 0px;left: 0px;color: #fff;
+}
+.zero{
+font-size:110px;font-family:"微软雅黑";float:left;border-right: 2px solid #fff;height: 86px;line-height: 86px;margin-left:10px;margin-top:40px;margin-right:10px;
+}
+.num{
+font-size: 21px;font-family: "黑体";font-style: oblique;line-height: 24px;margin-top: 37px;
+}
+.hello{
+font-size: 12px;font-family: "黑体";line-height: 10px;
+}
+.text3{
+font-size: 14px;color: #5a5b5b;font-family: "黑体";font-style: oblique;line-height: 16px;
+position:absolute;right:0;bottom:0;width: 180px;height: 140px;text-indent: 3em;
+}
+.text3 span{
+font-size: 72px;color: #d45d5c;font-family: "黑体";line-height: 30px;font-style: normal;
+}
+.spleft{
+position: absolute;bottom: 100px;right: 140px;
+}
+.spright{
+position: absolute;bottom: 10px;right: -20px;
+}
+footer{
+clear:both;width:892px;border-top: 1px solid #938e8c;height:40px;position:absolute;bottom:0;left:44px;
+}
+footer p{
+float: right;font: 12px "黑体";color: #d45d5c;
+}
+</style>
+</head>
+  
+<body>
+<div class="main">
+	<div class="top">
+		<div class="top_left">
+			<span>ife.baidu.com</span>
+		</div>
+			<time class="top_time">2016.03</time>
+	</div>
+	
+	<div class="middle_top">
+		<div class="middle_topleft">
+			<img alt="电脑" src="image/pic1.png"/>
+			<div class="greenleft"></div>
+			<div class="pinkright"></div>
+		</div>
+		<div class="middle_topright">
+			<P class="about1">about</P>
+			<P class="about1">technologe</P>
+			<P class="about3">about techologe about techologe about techologe</P>
+			<P class="about4">700</P>
+			<P class="about5">32</P>
+			<P class="about6">CSS</P>
+			<P class="about7">CSSCSCSCSCSCSSCCS</P>
+		</div>
+	</div>
+	<div class="middle_bottom">
+		<div class="middle_bottomleft">
+			<div class="what">What</div>
+			<p>前端前端前端前端前端前端前端前端前端前端前端
+			前端前端前端前端前端前端前端前端前端前端前端前端
+			前端前端前端前端前端前端前端前端前端前端前端前端
+			前端前端前端前端前端前端前端前端前端前端前端前端
+			前端前端前端前端前端前端前端前端前端前端前端前端
+			前端前端前端前端前端前端前端前端前端前端前端前端
+			前端前端前端前端前端前端前端前端前端前端前端前端
+			前端前端前端前端</p>
+		</div>
+		<div class="middle_bottommiddle">
+			<div class="when">When</div>
+			<p>前端前端前端前端前端前端前端前端前端前端前端
+			前端前端前端前端前端前端前端前端前端前端前端前端
+			前端前端前端前端前端前端前端前端前端前端前端前端
+			前端前端前端前端前端前端前端前端前端前端前端前端
+			前端前端前端前端前端前端前端前端前端前端前端前端
+			前端前端前端前端前端前端前端前端前端前端前端前端
+			前端前端前端前端前端前端前端前端前端前端前端前端
+			前端前端前端前端</p>
+		</div>
+		<div class="middle_bottomright">
+			<div class="how">How</div>
+			<p>前端前端前端前端前端前端前端前端前端前端前端
+			前端前端前端</p>
+			<ul>
+				<li>What------<span>40%</span></li>
+				<li>When------<span>30%</span></li>
+				<li>How------<span>30%</span></li>
+			</ul>
+		</div>					
+	</div>
+	<div class="buttom">
+		<div class="buttom_left">
+			<div class="buttom_lefttop">
+				<p><span>THE</span> technologe of front</p>
+				<p>前端技术领域</p>
+			</div>
+		
+			<div class="buttom_leftbottom">
+			<div class="qian">
+			<p>前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端
+				<img class="pic_2" src="image/pic3.png"/>
+				前端前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端</p>
+			</div>
+				
+			<p>前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端</p>
+			<p>前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端
+				前端前端前端前端前端前端前端前端前端前端前端前端</p>
+			</div>
+		</div>
+		<div class="bottom_right">
+			<div class="bottom_righttop">
+				<img src="image/pic2.png"/>
+				<div class="text">
+					<p>前端技术<span>前端技术前端技术</span></p>
+				</div>
+			</div>
+			<div class="bottom_rightbottom">
+				<div class="text1">
+					<ul>
+						<li>前端前端前端前端前端前端前端............<span class="sss">前端</span></li>
+						<li>前端前端前端前端前端前.................<span class="sss">前端前</span></li>
+						<li>前端前端前端前端前端前端前端前端........<span class="sss">前端</span></li>
+					</ul>
+				</div>
+				<div class="text2">
+					<p class="zero">0</p>
+					<p class="num">one two<br/> three four five</p>
+					<p class="hello">hello world hello world hello world</p>
+				</div>
+				<div class="text3">
+					<span class="spleft">“</span>
+					<p>world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello</p>
+					<span class="spright">”</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<p>ife.baidu.com</p>
+	</footer>
+</div>
+</body>
+</html>

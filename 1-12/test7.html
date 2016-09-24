@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>新世界</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="keywords" content="新世界">
+    <meta http-equiv="description" content="this is my page">
+    <link rel="stylesheet" type="text/css" href="baidu/css/font-awesome.min.css"/>
+<style type="text/css">
+body{
+margin:0;padding:0;width:100%;
+}
+header,article,footer,nav,select{
+display:block;
+}
+p{
+margin:0px;
+}
+.container{
+width:100%;min-width:1300px;font-family:"微软雅黑";
+}
+header{
+width:100%;height:60px;background:#fff;font-size: 0;/*使用font-size:0 来去掉inline-block元素之间的空隙方法*/
+}
+article{
+width:100%;
+}
+.top_left{
+width:10%;height:60px;display:inline-block;line-height: 60px;vertical-align: middle;/*header中三块元素都设置vertical-align: middle;保持同一行*/
+background:url(baidu/image7/icon-1.png) no-repeat left;background-size:20% 45%;position:relative;left:5%;
+}
+.top_left h1{
+font-size:24px;color: #4E3A4F;font-weight: 500;cursor: default;margin: 0;text-align: center;
+}
+header nav{
+width:30%;height:60px;display: inline-block;position:relative;left:40%;vertical-align: middle;
+}
+header ul{
+height: 60px;width: 100%;list-style: none;line-height: 60px;margin: 0;padding: 0;
+}
+header ul li{
+display:inline-block;width: 20%;font-size: 14px;text-align: center;color: #534141;cursor: pointer;
+-webkit-transition:color 0.5s ease-in-out;-moz-transition:color 0.5s ease-in-out;transition:color 0.5s ease-in-out;
+}
+header ul li:hover{
+color:#F04C57;
+}
+header ul .move{
+position:absolute;left:0;border-top:4px solid red;top:55px;
+-webkit-transition: left 0.4s ease-in-out;-moz-transition: left 0.4s ease-in-out;transition: left 0.4s ease-in-out;
+}
+header ul li:nth-child(1):hover~.move{
+left: 0;
+}
+header ul li:nth-child(2):hover~.move{
+    left: 20%;
+}
+header ul li:nth-child(3):hover~.move{
+    left: 40%;
+}
+header ul li:nth-child(4):hover~.move{
+    left: 60%;
+}
+header ul li:nth-child(5):hover~.move{
+    left: 80%;
+}
+
+.top_right{
+font-size: 14px;color: #E53C3C;height: 60px;width:7%;line-height:60px;display:inline-block;position:relative;left:50%;vertical-align:middle;cursor:pointer;text-align:center;
+background:url(baidu/image7/icon-2.jpg) left no-repeat;background-size:20% 25%;
+}
+.top_right .move{
+width:0px;border-top:4px solid red;position:absolute;top:55px;
+-webkit-transition: width 0.4s ease-in-out;-moz-transition: width 0.4s ease-in-out;transition: width 0.4s ease-in-out;
+}
+.top_right:hover .move{
+width:100%;
+}
+.art1{
+background:url(baidu/image7/pic01.jpg);background-size:100%;width:100%;height:650px;margin-top:-2px;
+}
+.art1 .timeof{
+position:absolute;top:300px;left:150px;
+}
+.art1 p{
+margin:0px;font-size:24px;color:#fff;font-family: "微软雅黑";
+}
+.art1 p:nth-child(1){
+font-size:60px;letter-spacing: 2px;
+}
+.art1 p:nth-child(2){
+margin-top:10px;
+}
+.art1 input{
+width:300px;height:60px;margin-top:60px;font-size:26px;background:red;color:#fff;border:0px solid red;opacity: 0.6;cursor: pointer;
+-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;
+-webkit-transition: opacity 0.4s ease-in-out;-moz-transition: opacity 0.4s ease-in-out;transition: opacity 0.4s ease-in-out;
+}
+.art1 input:hover,.art1 input:active{
+opacity: 1;
+}
+
+.art2{
+width:100%;height:250px;font-size:0;
+}
+.art2 .unit{
+display:inline-block;width:25%;font-size:14px;height:220px;
+}
+.art2 .unit .img{
+height: 150px;text-align:center;line-height:150px;position:relative;
+}
+.art2 .unit .img img{
+position:absolute;top:40%;left:45%;
+}
+.art2 .unit .mes{
+height:50px;text-align: center;border-right: 2px solid #534141;
+-webkit-transition: color 0.4s ease-in-out;-moz-transition: color 0.4s ease-in-out;transition: color 0.4s ease-in-out;
+}
+.art2 .unit:hover .mes{
+color:red;
+}
+
+.art3{
+width:100%;height:400px;background:#EDEAEA;text-align:center;
+}
+.art3 .img{
+position:relative;top:80px;
+}
+.art3 .mes{
+position:relative;top:120px;color:#111;font-size:40px;
+}
+.art4{
+width:100%;height:300px;background:url(baidu/image7/pic02.jpg);background-size:100%;border:1px solid;
+}
+.art4 .mes{
+height:180px;text-align: center;color:#fff;font-size:14px;
+}
+.art4 .mes p:first-child{
+margin-top:80px;font-size:24px;
+}
+.art4 select,.art4 input{
+display:inline-block;position:relative;left: 21%;bottom:40px;width:200px;height:34px;background:#fff;margin-right:20px;cursor: pointer;letter-spacing:10px;border:1px solid red;
+-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;
+}
+.art4 input{
+color:#fff;background-color:#BE4F48;font-size:16px;border:0px solid red;opacity: 0.8;text-indent: 10px;
+-webkit-transition: opacity 0.4s ease-in-out;-moz-transition: opacity 0.4s ease-in-out;transition: opacity 0.4s ease-in-out;
+}
+.art4 input:hover{
+opacity:1;
+}
+.art4 input:active{
+top:-38px;
+}
+
+.art5{
+width:100%;height:500px;font-size:0;background:#EDEAEA;text-align:center;
+}
+.art5 .unit{
+display:inline-block;width:20%;height: 400px;font-size:12px;color: #B3AFAC;position:relative;top:60px;
+}
+.art5 .unit .img{
+width: 100%;height:310px;
+}
+.art5 .unit .img img{
+height:300px;cursor:pointer;
+}
+.art5 .unit .mes p:nth-child(1){
+font-size:14px;color: #400;margin:0;
+}
+.art5 .unit:nth-child(2) .mes{
+margin-bottom: 10px;
+}
+.art5 .unit:nth-child(2)>.mes p:first-child{
+    font-size: 24px;
+    text-indent: 30px;
+    letter-spacing: 30px;
+}
+.art5 .unit:nth-child(2)>.mes p:last-child{
+    margin: 0;
+}
+
+.art6{
+height:550px;
+}
+.art6 .left{
+width:66.7%;height:550px;background: url(baidu/image7/pic07.jpg);background-size:cover;float:left;position:relative;
+}
+.art6 .left .mes{
+color:#fff;text-align:center;width:400px;height:400px;margin:0 auto;position:relative;top:140px;
+}
+.art6 .left p{
+font-size: 30px;;line-height: 30px;
+}
+.art6 .left p:first-child{
+font-size:46px;line-height: 46px;
+}
+.art6 .left p:nth-child(2){
+font-size:120px;margin:0px;
+}
+.art6 .left p:nth-child(3){
+margin-top:50px;
+}
+.art6 .left:after{
+content:"";
+width: 0;
+height: 0;
+border-top: 40px solid transparent;
+border-bottom: 40px solid transparent;
+border-right: 40px solid #fff;
+position:absolute;
+top:230px;
+right:0;
+}
+.art6 .right{
+height:100%;text-align: center;margin-left: 66%;
+}
+.art6 .right .all{
+height:300px;width:300px;margin:0 auto;position:relative;top:120px;
+}
+.art6 .right .mes p{
+margin:0;
+}
+.art6 .right .mes{
+    display: none;
+}
+.art6 .right .mes-1{
+    display: block;
+}
+.art6 .right .mes p:first-child{
+font-size: 20px;font-weight: 700;margin-bottom: 30px;
+}
+.art6 .right .mes p:first-child span{
+color: #BE4F48;
+}
+.art6 .right .mes p:last-child{
+text-align: left;font-size:14px;color: #B3AFAC;line-height: 25px;margin-bottom: 60px;
+}
+.art6 .right input[type="button"]{
+width:100px;height:40px;font-size: 13px;border: 1px solid #BE4F48;background:#fff;cursor: pointer;
+-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;
+-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;
+}
+.art6 .right input[type="button"]:hover{
+color: #fff;background-color: #BE4F48;
+}
+.art6 .right input[type="radio"]{
+width: 20px;height: 20px;opacity: 0.5;cursor: pointer;position: relative;top: 300px;
+}
+.art6 .right input[type="radio"]:checked~.mes{
+display:none;
+}
+.art6 .right input[type="radio"]:nth-of-type(1):checked~.mes-1{
+display:block;
+}
+.art6 .right input[type="radio"]:nth-of-type(2):checked~.mes-2{
+display:block;
+}
+.art6 .right input[type="radio"]:nth-of-type(3):checked~.mes-3{
+display:block;
+}
+
+.art7{
+height:500px;font-size:0;
+}
+.red{
+width:33.33%;height:500px;background:rgba(255,0,0, 0.7);text-align:center;vertical-align: middle;display:inline-block;
+}
+.white{
+width:33.33%;height:500px;background:rgba(255,255,255, 0.7);text-align:center;vertical-align: middle;display:inline-block;
+}
+.art7 .all{
+position:relative;top:200px;
+}
+.art7 .all p{
+font-size: 20px;line-height: 34px;
+}
+.art7 .red p{
+color:#fff;
+}
+.art7 .red input{
+width:140px;height:40px;color:#fff;background:rgba(255,0,0,0.3);border:1px solid #fff;cursor:pointer;margin-top:40px;font-size:20px;
+-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;
+}
+.art7 .red input:hover{
+color:red;background:#fff;
+}
+.art7 .white input{
+width:140px;height:40px;color:red;background:#fff;border:1px solid red;cursor:pointer;margin-top:40px;font-size:20px;
+-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;
+}
+.art7 .white input:hover{
+color:#fff;background:red;
+}
+.art7 .right{
+width:33.33%;height:500px;display:inline-block;background:url(baidu/image7/pic08.jpg);background-size:cover;vertical-align: middle;
+}
+.art7 .right:before{
+content:"";
+width:0;
+height:0;
+border-top: 40px solid transparent;
+border-bottom: 40px solid transparent;
+border-left: 40px solid #fff;
+position:relative;
+top:250px;
+}
+.art8{
+height:750px;text-align: center;
+}
+.art8 .top{
+height:300px;text-align: center;
+}
+.art8 .top .mes{
+position:relative;top:100px;
+}
+.art8 .top .mes p:first-child{
+font-size: 20px;margin-bottom:0px;cursor:pointer;
+}
+.art8 .top .mes span{
+width:20px;border-top:2px solid red;display:inline-block;
+-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;
+}
+.art8 .top .mes p:first-child:hover~span{
+width:160px;
+}
+.art8 .top .mes p:last-child{
+font-size:14px;line-height: 24px;color:#B3AFAC;margin-top:30px;
+}
+.art8 .left{
+width:30%;height:400px;text-align:left;display:inline-block;color:#B3AFAC;font-size:14px;vertical-align: middle;
+}
+.art8 .right{
+width:50%;height:400px;text-align:left;display:inline-block;color:#B3AFAC;font-size:14px;vertical-align: middle;
+}
+.art8 .left .mes p:first-child{
+font-size:16px;color:#222;margin-bottom:20px;margin-top:20px;
+}
+.art8 .left .mes span{
+margin-left: 280px;cursor:pointer;
+}
+.art8 .right input[type="text"]{
+width:300px;height:32px;margin-right:30px;margin-bottom:20px;background:#e1e1e1;border:1px solid #e1e1e1;font-size:14px;text-indent:1em;
+}
+.art8 .right input[type="text"]:focus{
+background:#fff;
+}
+.art8 .right textarea{
+background:#e1e1e1;padding:12px;border:1px solid #e1e1e1;resize: none;
+}
+.art8 .right textarea:focus{
+background:#fff;
+}
+.art8 .right input[type="submit"]{
+width:640px;height:34px;background:#e1e1e1;border:1px solid #e1e1e1;font-size:14px;color:#222;letter-spacing:2px;margin-top:20px;cursor:pointer;
+-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;
+}
+.art8 .right input[type="submit"]:hover{
+     -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     box-shadow: 0 0 1px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.3) inset; 
+}
+
+.art9{
+height:400px;text-align:center;background-color:#33363F;font-size:0;
+}
+.art9 .mes{
+height:150px;color:#fff;line-height: 20px;margin-top:80px;display: inline-block;font-size:16px;
+}
+.art9 .mes p:first-child{
+margin-bottom:40px;font-size:20px;
+}
+.art9 .email input[type="text"]{
+width:500px;height:34px;text-indent:1em;font-size:16px;
+}
+.art9 .email input[type="button"]{
+width:100px;height:40px;font-size:18px;color:#fff;background:#75757F;border: 0;cursor:pointer;
+}
+.art9 .email input[type="button"]:hover{
+background:#5E5E68;
+}
+/*====================================*/
+.art9 .icon{
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    font-size: 30px;
+    display: inline-block;
+    position: relative;
+    top: 30px;
+}
+.art9 .icon i{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    margin: 0;
+    cursor: pointer;
+    
+    -webkit-transition: font-size 0.4s ease-in-out;
+    -moz-transition: font-size 0.4s ease-in-out;
+    transition: font-size 0.4s ease-in-out;
+}
+.art9 .icon i:hover{
+    font-size: 35px;
+}
+
+/*====================================*/
+
+footer{
+width:100%;height:60px;background-color: #30303A;text-align: center;color:#fff;font-size:14px;
+}
+
+footer p{
+display:inline-block;line-height: 60px;
+}
+footer a{
+color:#fff;text-decoration: none;margin-left:80%;
+-webkit-transition: color 0.4s ease-in-out;-moz-transition: color 0.4s ease-in-out;transition: color 0.4s ease-in-out;
+}
+footer a:hover{
+color:#aaa;
+}
+</style>
+</head>
+  
+<body>
+<div class="container">
+	<header>
+		<div class="top_left">
+			<h1>新世界</h1>
+		</div>
+		<nav>
+			<ul>
+				<li>首页</li>
+				<li>最新活动</li>
+				<li>项目介绍</li>
+				<li>爱心社区</li>
+				<li>关于我们</li>
+				<li class="move"></li>
+			</ul>
+		</nav>
+		<div class="top_right">
+			<span>登录</span>
+			<div class="move"></div>
+		</div>
+	</header>
+	
+	<article class="art1">
+		<div class="timeof">
+			<p>Time of new life</p>
+			<p>新时代，年轻的人们让我们一起</p>
+			<p>体验新生活，享受新生活</p>
+			<input type="button" value="开始体验"/>
+		</div>
+	</article>
+	
+	<article class="art2">
+		<div class="unit">
+			<div class="img">
+				<img src="baidu/image7/icon-3.jpg"/>
+			</div>
+			<div class="mes">
+				<p>打造全新世界观，让你更<br/>爱你的生活</p>
+			</div>
+		</div>
+		<div class="unit">
+			<div class="img">
+				<img src="baidu/image7/icon-4.jpg"/>
+			</div>
+			<div class="mes">
+				<p>丰富多彩的公益活动，发<br/>挥新世界的主人公意识</p>
+			</div>
+		</div>
+		<div class="unit">
+			<div class="img">
+				<img src="baidu/image7/icon-5.jpg"/>
+			</div>
+			<div class="mes">
+				<p>时尚的新理念，超前体验<br/>未知的生活</p>
+			</div>
+		</div>
+		<div class="unit">
+			<div class="img">
+				<img src="baidu/image7/icon-6.jpg"/>
+			</div>
+			<div class="mes">
+				<p>完善的培养机制，培养你<br/>全新的世界观</p>
+			</div>
+		</div>
+	</article>
+	
+	<article class="art3">
+		<div class="img">
+			<img src="baidu/image7/icon-1.png"/>
+		</div>
+		<div class="mes">
+			<p>关于新世界，你不知道的还有什么？</p>
+		</div>
+	</article>
+	
+	<article class="art4">
+		<div class="mes">
+			<p>查找新世界城市活动信息</p>
+			<p>每个城市都有不同的活动信息，请自助查询您所需要了解的城市</p>
+		</div>
+		<select class="select">
+			<option>国家</option>
+			<option>中国</option>
+			<option>美国</option>
+		</select>
+		<select class="select">
+			<option>省份</option>
+			<option>北京</option>
+			<option>南京</option>
+		</select>
+		<select class="select">
+			<option>城市</option>
+			<option></option>
+			<option></option>
+		</select>		
+        <input type="submit" value="搜索"/> 
+	</article>
+	
+	<article class="art5">
+		<div class="unit">
+			<div class="img">
+				<img src="baidu/image7/pic03.jpg"/>
+			</div>
+			<div class="mes">
+				<p>北京活动</p>
+                <p>新社区大联盟</p>
+			</div>
+		</div>
+		<div class="unit">
+						<div class="mes">
+                <p>上海活动</p>
+                <p>夜上海新景观探索</p>
+			</div>
+			<div class="img">
+				<img src="baidu/image7/pic04.jpg"/>
+			</div>
+
+		</div>
+		<div class="unit">
+			<div class="img">
+				<img src="baidu/image7/pic05.jpg"/>
+			</div>
+			<div class="mes">
+				<p>深圳活动</p>
+                <p>全新海岸线观点站</p>
+			</div>
+		</div>
+		<div class="unit">
+			<div class="img">
+				<img src="baidu/image7/pic06.jpg"/>
+			</div>
+			<div class="mes">
+				<p>香港活动</p>
+                <p>奢侈消费大派送</p>
+			</div>
+		</div>
+	</article>
+	
+	<article class="art6">
+		<div class="left">
+			<div class="mes">
+				<p>新世界</p>
+	            <p>TIME</p>
+	            <p>@新世界-北京</p>
+	            <p>2016.04.01</p>
+            </div>
+		</div>
+		<div class="right">
+			<div class="all">
+				<input type="radio" name="xuan" checked="checked"/>
+	            <input type="radio" name="xuan" />
+	            <input type="radio" name="xuan"/>
+				<div class="mes mes-1">
+	                <p>新世界/<span>01</span></p>
+	                <p>新世界是个新世界1~新世界是个新世界1~新世界是个新世界1~新世界是个新世界1~新世界是个新世界1~新世界是个新世界1~新世界是个新世界1~新世界是个新世界1~新世界是个新世界1</p>
+	            </div>
+	            <div class="mes mes-2">
+	                <p>新世界/<span>02</span></p>
+	                <p>新世界是个新世界2新世界是个新世界2新世界是个新世界2新世界是个新世界2新世界是个新世界2新世界是个新世界2新世界是个新世界2新世界是个新世界2新世界是个新世界2</p>
+	            </div>
+	            <div class="mes mes-3">
+	                <p>新世界/<span>03</span></p>
+	                <p>新世界是个新世界3新世界是个新世界3新世界是个新世界3新世界是个新世界3新世界是个新世界3新世界是个新世界3新世界是个新世界3新世界是个新世界3新世界是个新世界3</p>
+	            </div>
+	            <input type="button" class="button" value="更多详情"/><br/>
+
+	        </div>
+		</div>
+	</article>
+	
+	<article class="art7">
+		<div class="red">
+			<div class="all">
+				<p>新时代</p>
+				<p>关于爱生活的我们</p>
+				<div>
+					<input type="button" value="查看更多"/>
+				</div>
+			</div>
+		</div>
+		<div class="white">
+			<div class="all">
+				<p>新时代</p>
+				<p>关于爱生活的我们</p>
+				<div>
+					<input type="button" value="查看更多"/>
+				</div>
+			</div>
+		</div>
+		<div class="right">
+		</div>		
+	</article>
+	
+	<article class="art8">
+		<div class="top">
+            <div class="mes">
+                <p>成为我们的志愿者</p>
+                <span class="xian"></span>
+                <p>新世界的大家庭需要每一个爱生活的人的人的加入，如果你够年轻，有梦想，有激情<br/>那就不要犹豫，快来加入我们，成为改变所有人生活的人</p>
+            </div>
+        </div>
+        <div class="left">
+            <div class="mes">
+                <p>新世界志愿者协议</p>
+                <p>加入新世界志愿者的人员必须遵守中华人民共和国的<br/>相关法律法规，并且本着平等的原则.......</p>
+                <span>∨ more</span>
+            </div>
+            <div class="mes">
+                <p>新世界志愿者协议</p>
+                <p>新世界志愿者享受新世界内部所有资源共享的权利，并<br/>且享受所在城市新世界活动的优先参与资格</p>
+                <span>∨ more</span>
+            </div>
+            <div class="mes">
+                <p>更多条款</p>
+                <span>∨ more</span>
+            </div>
+        </div>
+        <div class="right">
+        	<form action="">
+	            <input type="text" placeholder="姓名："/>
+	            <input type="text" placeholder="年龄："/>
+	            <input type="text" placeholder="联系方式："/>
+	            <input type="text" placeholder="联系地址："/>
+	            <textarea cols="85" rows="8" placeholder="请简单描述您梦想的生活："></textarea>
+	            <input type="submit" value="提交申请"/>
+        	</form>
+        </div>
+	</article>
+	
+	<article class="art9">
+		<div class="mes">
+			<p>联系我们</p>
+			<p>为了更好的获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯<br/>也可以通过以下任何方式关注我们的动态</p>
+		</div>
+		<div class="email">
+			<input type="text" placeholder="some@email.com"/>
+			<input type="button" value="提交"/>
+		</div>
+		<div class="icon">
+			<i class="fa fa-qq"></i>
+            <i class="fa fa-weibo"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-globe"></i>
+		</div>
+	</article>
+	
+	<footer>
+		<p>@2016新世界</p>
+		<a href="#">Back to top</a>
+	</footer>
+</div>
+</body>
+</html>

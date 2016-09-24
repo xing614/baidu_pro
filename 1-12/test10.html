@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>flexbox制作 text10.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+
+<style type="text/css">
+body, div {padding: 0;margin: 0;
+}
+.parent{
+display:flex;justify-content:space-between;align-items:center;
+}
+.child{
+width:150px;border:1px solid #f00;padding:2px;
+}
+.c1{
+height:120px;
+}
+.c2{
+height:100px;
+}
+.c3{
+height:40px;
+}
+.child:last-of-type{
+border: 1px solid #00f;height: 200px;
+}
+
+@media screen and (max-width:640px){
+.parent{
+flex-wrap:wrap;align-items: flex-start;
+}
+.child:last-of-type{
+order:-1;
+}
+}
+
+</style>
+  </head>
+  
+  <body>
+  <div class="parent">
+  	<div class="child c1"></div>
+  	<div class="child c2"></div>
+  	<div class="child c3"></div>
+  	<div class="child"></div>
+  </div>
+  123
+  </body>
+</html>

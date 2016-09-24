@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test1.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+	<script type="text/javascript" src="js/jquery/jquery-1.11.2.js"></script>
+<style type="text/css">
+body{
+line-height:30px;font-family:"Arial","Microsoft YaHei","黑体","宋体",sans-serif;background:#D6D6D6;margin:0px;padding:0px;min-width: 750px;
+}
+article, aside, footer, header, hgroup, main, nav, section {
+display: block;
+}
+article img{margin:20px;width:20%;}
+h3{ 
+    font-size: 1.17em;
+    -webkit-margin-before: 1em;/*元素上边距数值为1倍字体高度*/
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;}
+h4{color:#BEBFC3;
+    font-size: 0.83em;
+    -webkit-margin-before: 1.67em;
+    -webkit-margin-after: 1.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;}
+.header{
+width:100%;height:100px;background:#333333;display:table;/*使用display:table，使浮动*/
+}
+.header span{
+display: table-cell;
+vertical-align: middle;
+height: 70px;
+}
+.header img {
+    margin-left: 35px;
+    cursor: pointer;
+}
+nav ul{
+    float: right;
+    margin: 0px;
+    padding: 0px;
+}
+nav ul li {
+    line-height: 70px;
+    float: left;
+    margin-right: 20px;margin-top:20px;
+}
+nav a{
+color:#fff;text-decoration: none;
+}
+nav a:visited,nav a:hover,nav a:active{color:#BEBEBE;}
+
+aside{
+width:400px;margin-top:40px;margin-right:40px;padding:20px;background: #fff;float:right;font-size:14px;box-shadow: 2px 2px 2px #848484;
+}
+form{
+width:100%;
+}
+.tishi{
+color:#BEBFC3;font-size:14px;margin:0 0 10px 130px;
+}
+label{
+width:150px;display:inline-block;text-align:right;padding-right:4px;
+}
+textarea{
+vertical-align: top;/*上边框对齐*/
+}
+input[type="submit"]{
+width:80%;background:#FF8787;height:60px;text-align:center;border-radius:40px;font-size: 20px;color:#fff;margin:20px;
+}
+
+article{
+background:#fff;margin-left:40px;margin-right:550px;margin-top:40px;margin-bottom:20px;padding:20px;box-shadow: 2px 2px 2px #848484;
+}
+
+figure{
+height：120px;width:140px;border:1px solid ;text-align:center;margin-bottom: 20px;display: inline-block;
+}
+figcaption{
+padding:5px;display:block;
+}
+figure img{
+width:70%;
+}
+	table{
+	border:1px solid #D6D6D6;border-collapse:collapse;/*表格边框合并*/width:100%;
+	}
+	table tr{
+	border:1px solid #D6D6D6;
+	}
+	table td{
+	border:1px solid #D6D6D6;
+	}
+	table th{
+	border:1px solid #D6D6D6;background:black;color:#fff;
+	}
+	
+footer{
+height:70px;width:100%;color:#fff;background:#000;text-align:center;line-height:70px;font-size: 16px;font-weight: 500;
+}
+
+
+</style>
+</head>
+  
+<body>
+  <header class="header">
+  <span>
+  	<img alt="网站一级主题" src="image/tou1.png"/>
+  </span>
+  <!-- <h1>网站一级主题</h1> -->
+  <nav>
+ <ul>
+	<li><a href="javascript:void();">导航链接一</a></li>
+	<li><a href="javascript:void();">导航链接二</a></li>
+	<li><a href="javascript:void();">导航链接三</a></li>
+	<li><a href="javascript:void();">导航链接四</a></li>
+</ul>
+  </nav>
+</header>
+
+
+<aside><!-- <aside> 的内容可用作文章的侧栏。 -->
+	<h2>这里以后是一个侧栏，这是侧栏的标题</h2>
+	<h3>侧栏注册窗口标题</h3>
+<form action="#">
+<div>
+	<label for="in1">请输入邮箱地址：</label>
+	<input type="email" id="in1" placeholder="这是文本输入框"/>
+</div>	
+	<p class="tishi">邮箱地址能按照正确格式输入</p>
+<div>	
+	<label for="in2">请输入密码：</label>
+	<input type="password" id="in2" placeholder="这是文本输入框"/>
+</div>
+<div>	
+	<label for="in2">请重复输入密码：</label>
+	<input type="password" id="in2" placeholder="这是文本输入框"/>
+</div>
+	<p class="tishi">密码为6-16位数字英文</p>
+<div>
+	<label>性别：</label><input type="radio" name="gard" value="male"/>男<input type="radio" name="gard" value="rema"/>女
+</div>	
+<div>
+	<label>城市：</label><select>
+		<option>北京</option>
+		<option>南京</option>
+		<option>西京</option>
+		<option>东京</option>
+	</select>
+</div>
+<div>
+	<label>爱好：</label>
+	<input type='checkbox' name="check" value="yundong"/>运动
+	<input type='checkbox' name="check" value="yundong"/>艺术
+	<input type='checkbox' name="check" value="yundong"/>科学</div>
+<div>
+	<label>个人描述：</label><textarea rows="5" cols="22">这是一个多行输入框，输入个人描述</textarea>
+</div>
+<div style="text-align:center;">
+	<input type="submit" value="确认提交"/>
+</div>
+</form>
+</aside>
+
+<article>
+<header>
+	<h2>文章一级标题</h2>
+	<h3>文章二级标题</h3>
+</header>
+	<h4>
+		<span>文章作者</span> 
+		<time>文章发表时间</time>
+	</h4>
+	<p>这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，</p><p>这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，
+	这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，
+	这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落.</p>
+	<img alt="图片" src="image/adv.png"/>
+	<p>这是混啊哈哈哈哈的段落，<a href="www">这有一个链接</a>这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落.<p>
+</article>
+
+<article>
+<header>
+	<h2>另一篇文章一级标题</h2>
+	<h3>文章二级标题</h3>
+</header>
+	<h4>
+		<span>文章作者 </span>
+		<time>文章发表时间</time>
+	</h4>
+	<p>这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，</p><p>这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，
+	这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，
+	这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落，这是混啊哈哈哈哈的段落.</p>
+	<img alt="图片" src="image/adv.png"/>
+	<ol>
+		<li>列表题目一</li>
+		<li>列表题目一</li>
+		<li>列表题目一</li>
+	</ol>
+</article>
+
+<article>
+<h2>图片</h2>
+<figure><!-- <figure> 标签规定独立的流内容（图像、图表、照片、代码等等）。 --><!-- <figcaption> 标签定义 figure 元素的标题（caption）。 -->
+	<figcaption>好看的图片</figcaption>
+	<img alt="好看的图片" src="image/adv.png"/>
+</figure>
+<figure>
+	<figcaption>好看的图片</figcaption>
+	<img alt="好看的图片" src="image/adv.png"/>
+</figure>
+<figure>
+	<figcaption>好看的图片</figcaption>
+	<img alt="好看的图片" src="image/adv.png"/>
+</figure>
+<figure>
+	<figcaption>好看的图片</figcaption>
+	<img alt="好看的图片" src="image/adv.png"/>
+</figure>
+<figure>
+	<figcaption>好看的图片</figcaption>
+	<img alt="好看的图片" src="image/adv.png"/>
+</figure>
+<figure>
+	<figcaption>好看的图片</figcaption>
+	<img alt="好看的图片" src="image/adv.png"/>
+</figure>
+<figure>
+	<figcaption>好看的图片</figcaption>
+	<img alt="好看的图片" src="image/adv.png"/>
+</figure>
+</article>
+
+
+<article>
+<header>
+	<h2>最后一篇文章一级标题</h2>
+	<h3>文章二级标题</h3>
+</header>
+	<h4>
+		<span>文章作者</span> 
+		<time>文章发表时间</time>
+	</h4>
+	<ol>
+		<li>排名1</li>
+		<li>排名2</li>
+		<li>排名3</li>
+	</ol>
+	下面是一个表格
+		<table border="1">
+		<thead>
+			<tr>
+				<th>表头</th>
+				<th>表头</th>
+				<th>表头</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>表内容单元格</td>
+				<td>表内容单元格</td>
+				<td><a href="#">操作</a></td>
+			</tr>
+		</tbody>
+		<tbody>
+			<tr>
+				<td>表内容单元格</td>
+				<td>表内容单元格</td>
+				<td><a href="#">操作</a></td>
+			</tr>
+		</tbody>
+				<tbody>
+			<tr>
+				<td>表内容单元格</td>
+				<td>表内容单元格</td>
+				<td><a href="#">操作</a></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>总额</td>
+				<td colspan="2">1000</td>
+			</tr>	
+		</tfoot>		
+		</table>
+</article>
+
+<footer>
+<span>版权所有@</span>
+</footer>
+
+  </body>
+</html>

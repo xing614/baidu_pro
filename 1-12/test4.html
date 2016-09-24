@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test4.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<style type="text/css">
+.fangkuai{
+background:#CCC;
+width:400px;
+height:200px;
+border:1px solid #CCC;
+position:absolute;
+left:50%;
+margin-left:-200px;
+top:50%;
+margin-top:-100px;/*会上移动*/
+}
+.fangkuai:before{
+    content:"";
+    position: absolute;
+    top: 0%;
+    background: #fc9;
+    width: 50px;
+    height: 0px;
+    border:0 solid transparent;
+    border-radius: 0 0 100px 0;
+    border-top:50px solid #669;
+}
+.fangkuai:after{
+    content:"";
+    position: absolute;
+    top: 75%;
+    right:0%;
+    background: #fc9;
+    width: 50px;
+    height: 0px;
+    border:0 solid transparent;
+    border-radius: 100px 0 0 0;
+    border-top:50px solid #669;
+}
+</style>
+  </head>
+  
+  <body>
+  <div class="fangkuai"></div>
+
+  </body>
+</html>

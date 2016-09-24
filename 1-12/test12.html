@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>任务十二：学习CSS 3的新特性</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+table{
+display: table;
+border-collapse: separate;/*separate	默认值。边框会被分开。不会忽略 border-spacing 和 empty-cells 属性。*/
+border-spacing: 2px;/*设置相邻单元格的边框间的距离*/
+border-color: grey;
+}
+table tr{
+border:1px solid #D6D6D6;
+}
+table td{
+border:1px solid #D6D6D6;
+}
+table th{
+border:1px solid #D6D6D6;background:#000;color:#fff;
+} 
+table tbody tr:nth-child(2n){
+background:#2eee2e;
+}
+table tbody tr:nth-child(-n+3){
+color:red;
+}
+
+input{
+width:100px;border:2px solid #ddd;margin:20px;padding:10px;transition:border-color,width 0.5s;
+}
+input:focus{
+width:200px;border-color: blue;
+}
+
+.banner{
+width:200px;height:150px;position:relative;background-color:red;
+}
+.banner ul{
+margin: 0;padding: 0;
+}
+.bul li{
+display: block;
+}
+.bul{
+width:100%;height:100%;position:absolute;left:0;top:0;animation:slider-init 0.5s  linear;
+}
+
+.bul li{
+width:100%;height:100%;position:absolute;left:-100%;top: 0;animation:slider-out 0.5s linear;
+}
+#bul1 {
+  background-color: red;
+}
+
+#bul2 {
+  background-color: green;
+}
+
+#bul3 {
+  background-color: blue;
+}
+.bul li:target {/*在使用:target改变时，a中href对应的内容要使用id的值，而不是class*/
+left:0%;animation:slider-in 0.5s linear;
+}
+
+@keyframes slider-init {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes slider-out {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes slider-in{
+	0%{
+	left:100%;
+	}
+	100%{
+	left:0%;
+	}
+}
+.btn{
+position:absolute;bottom:0;right:0;z-index: 100;display:flex;
+}
+.btn a{
+display:block;background:rgba(255, 255, 255, 0.8);;padding:10px 14px;margin:0 1px;text-decoration:none;color:#000;
+}
+
+
+/*=============================================================================================*/
+
+.banner2{
+    position: relative;
+    width: 300px;
+    margin-top: 50px;
+	overflow: hidden;
+}
+.banner-container{
+    width: 300%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    transition: 0.5s left;
+    font-size: 0;
+    word-spacing: 0;
+    letter-spacing: 0;
+}
+.banner-container li{
+    display: inline-block;
+    list-style: none;
+    width: 300px;
+    height: 100px;
+}
+.banner-container li:nth-child(1){
+    background-color: #00f;
+}
+.banner-container li:nth-child(2){
+    background-color: #0f0;
+}
+.banner-container li:nth-child(3){
+    background-color: #f00;
+}
+.banner-controller{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.banner-controller a{
+    text-decoration: none;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 16px;
+    background-color: #fff;
+    opacity: 0.5;
+    text-align: center;
+    color: #cccccc;
+}
+.banner-controller a:visited{
+    color: #cccccc;
+}
+
+#img1:target~.banner-container{
+    left: 0
+}
+#img2:target~.banner-container{
+    left: -100%;
+}
+#img3:target~.banner-container{
+    left: -200%;
+}
+</style>
+
+  </head>
+  
+  <body>
+  <table>
+  	<thead>
+  		<tr>
+  			<th>排名</th>
+  			<th>网站</th>
+  			<th>热度</th>
+  		</tr>
+  	</thead>
+  	<tbody>
+  		<tr>
+  			<td>1</td>
+  			<td>百度前端技术学院</td>
+  			<td>13000</td>
+  		</tr>
+  		<tr>
+  			<td>2</td>
+  			<td>百度前端技术学院</td>
+  			<td>12000</td>
+  		</tr>
+  		<tr>
+  			<td>3</td>
+  			<td>百度前端技术学院</td>
+  			<td>11000</td>
+  		</tr>
+  		<tr>
+  			<td>4</td>
+  			<td>百度前端技术学院</td>
+  			<td>10000</td>
+  		</tr>
+  		<tr>
+  			<td>5</td>
+  			<td>百度前端技术学院</td>
+  			<td>9000</td>
+  		</tr>
+  		<tr>
+  			<td>6</td>
+  			<td>百度前端技术学院</td>
+  			<td>13000</td>
+  		</tr>
+  		<tr>
+  			<td>7</td>
+  			<td>百度前端技术学院</td>
+  			<td>13000</td>
+  		</tr>
+  		<tr>
+  			<td>8</td>
+  			<td>百度前端技术学院</td>
+  			<td>13000</td>
+  		</tr>
+  		<tr>
+  			<td>9</td>
+  			<td>百度前端技术学院</td>
+  			<td>13000</td>
+  		</tr>
+  		<tr>
+  			<td>10</td>
+  			<td>百度前端技术学院</td>
+  			<td>13000</td>
+  		</tr>  		
+  		<tr>
+  			<td>11</td>
+  			<td>百度前端技术学院</td>
+  			<td>13000</td>
+  		</tr>
+  	</tbody>
+  </table>
+  <input type="text" />
+  <div class="banner">
+  	<ul class="bul">
+  		<li id="bul1"></li>
+  		<li id="bul2"></li>
+  		<li id="bul3"></li>
+  	</ul>
+  	  <div class="btn">
+  		<a href="#bul1">1</a>
+  		<a href="#bul2">2</a>
+  		<a href="#bul3">3</a>
+  </div>
+  </div>
+  
+  第二种实现<br>
+      <div class="banner2">
+        <span id="img1"></span>
+        <span id="img2"></span>
+        <span id="img3"></span>
+        <ul class="banner-container">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="banner-controller">
+            <a href="#img1">1</a>
+            <a href="#img2">2</a>
+            <a href="#img3">3</a>
+        </div>
+    </div>
+  
+  </body>
+</html>
